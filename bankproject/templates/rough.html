@@ -1,0 +1,18 @@
+
+
+<ul class="nav">
+    {% if user.is_authenticated %}
+    <ul style="font-size: 20px;text-align:center"><a href="{% url 'credential:logout' %}">Logout</a></ul>
+    {% endif %}
+</ul>
+    {% if messages %}
+    <br>
+    <br>
+<ul class="messages">
+    {% for message in messages %}
+    <li  style="color:red;font-size:20px;text-align:center">{{ message }}</li>
+
+    {% endfor %}
+</ul>
+{% endif %}
+</ul>
